@@ -1,6 +1,7 @@
 {
     "name": "Discipline Days",
-    "short_name": "DisciplineDays",
+    "short_name": "Discipline Days",
+    "description": "A private discipline tracker with PIN lock, streaks, quotes, and a 14-day progress calendar.",
     "start_url": "/stop-mn/",
     "scope": "/stop-mn/",
     "display": "standalone",
