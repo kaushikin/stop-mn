@@ -1,0 +1,254 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #4f46e5;
+    --green: #16a34a;
+    --orange: #f97316;
+    --red: #dc2626;
+    --border: #e5e7eb;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  
+  .center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .auth-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 24px;
+  }
+  
+  h1, h2, h3, p {
+    margin-top: 0;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  
+  button {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+    width: 100%;
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: var(--text);
+    border: 1px solid var(--border);
+    width: 100%;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .topbar h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .stat {
+    border-radius: 16px;
+    padding: 18px;
+    color: white;
+    min-height: 110px;
+  }
+  
+  .stat.orange { background: var(--orange); }
+  .stat.green { background: var(--green); }
+  .stat.red { background: var(--red); }
+  .stat.indigo { background: var(--primary); }
+  
+  .stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .quote {
+    background: #eef2ff;
+  }
+  
+  .progress-wrap {
+    background: #ecfdf5;
+  }
+  
+  .progress-bar-bg {
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: #d1fae5;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--green);
+    width: 0%;
+  }
+  
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .day-box {
+    background: #e5e7eb;
+    border-radius: 14px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid transparent;
+  }
+  
+  .day-box.done {
+    background: var(--green);
+    color: white;
+  }
+  
+  .day-box.today {
+    border-color: var(--orange);
+  }
+  
+  .small {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #111827;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    z-index: 1000;
+  }
+  
+  .modal {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  
+  .modal-actions button {
+    flex: 1;
+  }
+  
+  .tips ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 700px) {
+    .grid,
+    .actions {
+      grid-template-columns: 1fr;
+    }
+  
+    .calendar-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .topbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
